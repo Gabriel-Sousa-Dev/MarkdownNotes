@@ -1,5 +1,6 @@
 import { Accordion } from '@ark-ui/react/accordion'
 import { css } from '../../styled-system/css'
+import { Link } from 'react-router'
 
 export const Basic = () => {
   return (
@@ -29,6 +30,7 @@ export const Basic = () => {
           </Accordion.ItemContent>
         </Accordion.Item>
       ))}
+      <Link to='/alou' >dasdlo</Link>
     </Accordion.Root>
   )
 }

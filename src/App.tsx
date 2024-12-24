@@ -1,11 +1,10 @@
-import { Basic } from "@Components/Basic"
+import { Router } from "@Components/Router"
 
 function App() {
 
   return (
     <>
-      <p>oie</p>
-      <Basic />
+      <Router/>
     </>
   )
 }

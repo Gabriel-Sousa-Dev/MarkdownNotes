@@ -20,17 +20,18 @@ export default defineConfig({
             secondary: { value: '#40798c' },
             tertiary: { value: '#70a9a1' },
             quaternary: { value: '#9ec1a3' },
-            quintenary: { value: '#cfe0c3'}
+            quintenary: { value: '#cfe0c3'},
+
           }
         }
       }
     },
   },
-
+ 
   globalCss: {
     html: {
       '--global-font-body': '"Noto Sans", serif',
-      background: 'red.600'
+      background: 'slate.900'
     }
   },
 

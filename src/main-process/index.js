@@ -8,7 +8,7 @@ function createWindow(){
     })
 
     mainWindow.loadFile(path.join(app.getAppPath(), "dist-react/index.html"))
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then( () => {
