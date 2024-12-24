@@ -20,7 +20,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@Components/*": ["./src/components/*"]
+    }
   },
-  "include": ["src"]
+  "include":  ["src", "styled-system"]
 }
