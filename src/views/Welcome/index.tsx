@@ -24,7 +24,7 @@ export function Welcome(){
                         Icon={HiLogout}
                         label='Sair'
                     />
-                    <Link to='/app/notes-management'>dsadas</Link>
+                    <Link to='/app/group-management'>dsadas</Link>
                     <Link to='/app/editor/5'>dsadas</Link>
                 </div>
             </div>

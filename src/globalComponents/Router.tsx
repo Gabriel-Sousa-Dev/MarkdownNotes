@@ -11,7 +11,7 @@ export function Router(){
                 <Route path='/' element={<Welcome />} />
 
                 <Route path='/app' element={<TitleBar/>}> 
-                    <Route path='notes-management' element={<GroupManagement />}/>
+                    <Route path='group-management' element={<GroupManagement />}/>
                     <Route path='editor/:id' element={<Editor />}/>
                 </Route>
             </Routes>

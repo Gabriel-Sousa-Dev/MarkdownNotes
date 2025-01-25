@@ -6,7 +6,7 @@ interface ActionButtonProps {
     onClickCallback?: () => void
 }
 
-const ActionButtonRecipe = sva({
+const actionButtonRecipe = sva({
     className: 'action_button',
     slots: ['root', 'icon', 'label'],
     base: {
@@ -42,7 +42,7 @@ const ActionButtonRecipe = sva({
 
 
 export function ActionButton({Icon, label, onClickCallback}: ActionButtonProps ){
-    const actionButtonClasses = ActionButtonRecipe()
+    const actionButtonClasses = actionButtonRecipe()
     return(
         <div className={actionButtonClasses.root} onClick={onClickCallback}>
             <Icon className={actionButtonClasses.icon}/>
