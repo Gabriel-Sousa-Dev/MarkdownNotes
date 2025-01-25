@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router";
 import { sva } from "../../../../../styled-system/css";
 
 interface ActionButtonProps {
     Icon: React.ElementType,
     label: string,
+    to?: string,
     onClickCallback?: () => void
 }
 
@@ -41,10 +43,15 @@ const actionButtonRecipe = sva({
 });
 
 
-export function ActionButton({Icon, label, onClickCallback}: ActionButtonProps ){
+export function ActionButton({Icon, label, onClickCallback, to}: ActionButtonProps ){
     const actionButtonClasses = actionButtonRecipe()
+
+    const navigate = useNavigate();
+
+    
+
     return(
-        <div className={actionButtonClasses.root} onClick={onClickCallback}>
+        <div className={actionButtonClasses.root} onClick={to ? ()=>navigate(to) : onClickCallback}>
             <Icon className={actionButtonClasses.icon}/>
             <span className={actionButtonClasses.label}>{label}</span>
         </div>

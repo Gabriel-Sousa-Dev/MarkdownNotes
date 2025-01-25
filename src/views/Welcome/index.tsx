@@ -15,17 +15,18 @@ export function Welcome(){
                     <ActionButton
                         Icon={HiDocumentAdd}
                         label='Novo Nota'
+                        to='/app/editor/5'
                     />
                     <ActionButton
                         Icon={HiDocumentSearch}
                         label='Gerenciar Notas'
+                        to='/app/group-management'
                     />
                     <ActionButton
                         Icon={HiLogout}
                         label='Sair'
+                        onClickCallback={()=>window.alert('Faça a logica de saida da aplicação')}
                     />
-                    <Link to='/app/group-management'>dsadas</Link>
-                    <Link to='/app/editor/5'>dsadas</Link>
                 </div>
             </div>
         </>
