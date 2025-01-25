@@ -40,7 +40,7 @@ export function GroupManagement(){
             mx: 'auto',
             marginTop: '4',
             paddingX: '2',
-            height: 'full'
+            height: '100%'
         })}>
             <div className={css({
                 display: 'flex',

@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 
 html {
-    font-family: "Noto Sans", serif
+    font-family: "Noto Sans", serif;
+    height: 100%;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#root {
+    min-height: 100%;
+    scrollbar-width: 0;
 }
 
