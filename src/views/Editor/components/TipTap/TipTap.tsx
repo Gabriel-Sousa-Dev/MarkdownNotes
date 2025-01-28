@@ -4,6 +4,7 @@ import TiptapElements from './elements';
 import { css } from '../../../../../styled-system/css';
 import { FaBold, FaHeading, FaList } from 'react-icons/fa';
 import { CustomFloatingMenu } from './CustomFloatingMenu';
+import { CustomBubbleMenu } from './CustomBubbleMenu';
 
 console.log(TiptapElements);
 
@@ -24,7 +25,9 @@ const extensions = [StarterKit.configure({
         HTMLAttributes: {
             class: TiptapElements.blockquoteStyle
         }
-    }
+    },
+    
+
 
 
 
@@ -63,7 +66,7 @@ export function TipTap() {
         <>
             <EditorContent editor={editor}  />
             <CustomFloatingMenu editor={editor} />
-            <BubbleMenu editor={editor}>This is the bubble menu</BubbleMenu>
+            <CustomBubbleMenu editor={editor} />
             <button onClick={handleClick}>teste</button>
         </>
     )

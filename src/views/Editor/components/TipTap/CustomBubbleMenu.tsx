@@ -1,14 +1,14 @@
-import { Editor, FloatingMenu } from "@tiptap/react";
+import { BubbleMenu, Editor } from "@tiptap/react";
 import { FaBold, FaCode, FaHeading, FaList, FaStrikethrough } from "react-icons/fa";
 import { css } from "../../../../../styled-system/css";
 import { square } from "../../../../../styled-system/patterns";
 
-interface CustomFloatingMenuProps {
+interface CustomBubbleMenuProps {
     editor: Editor | null
 }
 
-export function CustomFloatingMenu({editor}: CustomFloatingMenuProps){
-    const floatingMenuClass = css({ padding: 0, borderRadius: 'md', backgroundColor: 'slate.500', display:'flex', gap:0, overflow: 'hidden'})
+export function CustomBubbleMenu({editor}: CustomBubbleMenuProps){
+    const bubbleMenuClass = css({ padding: 0, borderRadius: 'md', backgroundColor: 'slate.500', display:'flex', gap:0, overflow: 'hidden'})
 
     const activeMenuItemClass = square({
         color: 'slate.200',
@@ -33,7 +33,7 @@ export function CustomFloatingMenu({editor}: CustomFloatingMenuProps){
     
 
     return(
-        <FloatingMenu editor={editor} tippyOptions={{duration: 100, placement: 'bottom-start'}} className={floatingMenuClass}>
+        <BubbleMenu editor={editor} tippyOptions={{duration: 100, placement: 'top'}} className={bubbleMenuClass}>
             <button
                 onClick={() => editor!.chain().focus().toggleBold().run()}
                 className={editor!.isActive('bold') ? activeMenuItemClass : inactiveMenuItemClass }
@@ -66,6 +66,6 @@ export function CustomFloatingMenu({editor}: CustomFloatingMenuProps){
                 <FaStrikethrough />
             </button>
 
-        </FloatingMenu>
+        </BubbleMenu>
     )
 }
