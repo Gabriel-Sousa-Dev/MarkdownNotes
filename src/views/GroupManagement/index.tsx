@@ -57,8 +57,7 @@ export function GroupManagement(){
                     mock.map((group, ind) => <CategoryRow key={ind} number={group.number} label={group.label} />)
                 }
             </div>
-
-            <div className={divider({orientation: 'vertical', color: 'slate.300', height: 'auto'})}></div>
+            
 
             <div className={grid({
                 backgroundColor: 'slate.800',

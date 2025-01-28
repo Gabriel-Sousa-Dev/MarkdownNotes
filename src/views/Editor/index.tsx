@@ -1,5 +1,6 @@
 // import { useParams } from "react-router"
 import { css } from "../../../styled-system/css"
+import { TipTap } from "./components/TipTap/TipTap"
 
 export function Editor(){
     // const { id } = useParams()
@@ -12,16 +13,18 @@ export function Editor(){
             height: '100vh',
             backgroundColor: 'slate.700',
             borderRadius: 'md',
-            padding: 1
+            paddingX: 2,
+            paddingY: 1 
         })}>
-            <textarea 
+            {/* <textarea 
                 className={css({
                     outline: 'none',
                     height: '100%',
                     width: '100%',
                     color: 'slate.300'
                 })}
-            />
+            /> */}
+            <TipTap />
         </div>
     )
 }   

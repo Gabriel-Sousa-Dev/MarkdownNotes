@@ -2,7 +2,7 @@ import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
   // Whether to use css reset
-  preflight: true,
+  preflight: false,
 
   // Where to look for your css declarations
   include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
@@ -31,7 +31,23 @@ export default defineConfig({
   globalCss: {
     html: {
       '--global-font-body': '"Noto Sans", serif',
-      background: 'slate.900'
+      background: 'slate.900',
+      boxSizing: 'border-box',
+      // '> *': {
+      //   margin:0,
+      //   padding: 0
+      // }
+    },
+    body: {
+      padding: 0,
+      margin: 0
+    },
+    'input, button': {
+      margin: 0,
+      padding: 0,
+      all: 'unset',
+      boxSizing:'border-box',
+      font: 'inherit'
     }
   },
 
