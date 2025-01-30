@@ -3,7 +3,7 @@
 import { CategoryRow } from "./components/CategoryRow";
 import { InputGroup } from "./components/InputGroup";
 import { css } from "../../../styled-system/css";
-import { divider, grid } from "../../../styled-system/patterns";
+import { grid } from "../../../styled-system/patterns";
 
 const mock = [
     {

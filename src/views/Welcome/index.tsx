@@ -3,7 +3,6 @@ import logo from '../../assets/logo-dark-transparent-cropped.png'
 import { ActionButton } from './components/ActionButton/ActionButton'
 import { vstack } from '../../../styled-system/patterns';
 import { css } from '../../../styled-system/css';
-import { Link } from 'react-router';
 
 export function Welcome(){
 

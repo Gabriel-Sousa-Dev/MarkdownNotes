@@ -6,3 +6,5 @@ export const codeStyle = css({
     backgroundColor: '#6366f14D',
     borderRadius: 'md',
 });
+
+// TODO: adicionar mono-espaçada, fazer funcionar com Electron

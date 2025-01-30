@@ -42,6 +42,9 @@ export default defineConfig({
       padding: 0,
       margin: 0
     },
+    '*': {
+      boxSizing: 'border-box'
+    },
     'input, button': {
       margin: 0,
       padding: 0,

@@ -13,7 +13,7 @@ export function Editor(){
             height: '100vh',
             backgroundColor: 'slate.700',
             borderRadius: 'md',
-            paddingX: 2,
+            paddingX: 3,
             paddingY: 1 
         })}>
             {/* <textarea 

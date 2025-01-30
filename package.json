@@ -15,6 +15,10 @@
   "dependencies": {
     "@ark-ui/react": "^4.5.0",
     "@tiptap/extension-code-block-lowlight": "^2.11.3",
+    "@tiptap/extension-table": "^2.11.3",
+    "@tiptap/extension-table-cell": "^2.11.3",
+    "@tiptap/extension-table-header": "^2.11.3",
+    "@tiptap/extension-table-row": "^2.11.3",
     "@tiptap/pm": "^2.11.3",
     "@tiptap/react": "^2.11.3",
     "@tiptap/starter-kit": "^2.11.3",

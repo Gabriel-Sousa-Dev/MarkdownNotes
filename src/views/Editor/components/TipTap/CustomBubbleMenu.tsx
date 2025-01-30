@@ -53,8 +53,8 @@ export function CustomBubbleMenu({editor}: CustomBubbleMenuProps){
                 <FaHeading />
             </button>
             <button
-                onClick={() => editor!.chain().focus().toggleCodeBlock().run()}
-                className={editor!.isActive('codeblock') ? activeMenuItemClass : inactiveMenuItemClass }
+                onClick={() => editor!.chain().focus().toggleCode().run()}
+                className={editor!.isActive('code') ? activeMenuItemClass : inactiveMenuItemClass }
             >
                 <FaCode />
             </button>

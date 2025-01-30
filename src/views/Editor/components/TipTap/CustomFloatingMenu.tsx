@@ -1,5 +1,5 @@
 import { Editor, FloatingMenu } from "@tiptap/react";
-import { FaBold, FaCode, FaHeading, FaList, FaStrikethrough } from "react-icons/fa";
+import { FaBold, FaCode, FaHeading, FaList, FaQuoteLeft, FaStrikethrough, FaTable } from "react-icons/fa";
 import { css } from "../../../../../styled-system/css";
 import { square } from "../../../../../styled-system/patterns";
 
@@ -58,12 +58,23 @@ export function CustomFloatingMenu({editor}: CustomFloatingMenuProps){
             >
                 <FaCode />
             </button>
-
             <button
                 onClick={() => editor!.chain().focus().toggleStrike().run()}
                 className={editor!.isActive('strike') ? activeMenuItemClass : inactiveMenuItemClass }
             >
                 <FaStrikethrough />
+            </button>
+            <button
+                onClick={() => editor!.chain().focus().toggleBlockquote().run()}
+                className={editor!.isActive('blockquote') ? activeMenuItemClass : inactiveMenuItemClass}
+            >
+                <FaQuoteLeft />
+            </button>
+            <button
+                onClick={() => editor!.chain().focus().insertTable({cols: 3, rows: 3, withHeaderRow: true}).run()}
+                className={inactiveMenuItemClass}
+            >
+                <FaTable />
             </button>
 
         </FloatingMenu>
