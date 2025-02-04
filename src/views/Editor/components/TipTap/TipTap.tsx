@@ -68,20 +68,33 @@ export function TipTap() {
 
     useEffect(() => {
         setLoadingNote(true);
+        console.log(id, 'nota tentando acessar');
+        
 
-        if(window.api && id){
-            console.log('reconheceu a existencia dos dois');
-            
-            window.api.readNote(id).then( (content) => {
+        if(id === undefined){
+            alert('ID não foi definido')
+            return;
+        }
+
+        // Caso a nota seja nova
+        if(parseInt(id) === 1){
+            window.api?.saveNote({
+                noteId: id.toString(),
+                content: {}
+            })
+            return;
+        }
+
+        if(parseInt(id) !== 1){            
+            window.api?.readNote(id).then( (content) => {
                 console.log('content finalmente: ', content)
                 setLoadingNote(false);
                 
             } )
+            return;
         }
-
         
-
-
+        setLoadingNote(false)
     }, [])
 
     const editor = useEditor({
@@ -93,7 +106,7 @@ export function TipTap() {
                     color: 'slate.200',
                     height: '100%',
                     outline: 'none',
-                })
+                }),
             }
         },
         
@@ -102,15 +115,14 @@ export function TipTap() {
 
     function handleClick(){
         const content = editor?.getJSON();
-        console.log(window.api, id);
 
         if(window.api && id){
             window.api.saveNote({noteId: id, content})
 
         }else{
-            console.log(window.api);
             
-            console.warn('window.api não existe')
+            
+            console.warn('window.api não existe | Provalvemente você está rodando o Sistema na Web')
         }
         
     }
@@ -122,7 +134,7 @@ export function TipTap() {
 
     return(
         <>
-            <EditorContent editor={editor}  />
+            <EditorContent editor={editor} spellCheck={false} />
             <CustomFloatingMenu editor={editor} />
             <CustomBubbleMenu editor={editor} />
             <button onClick={handleClick}>enviar</button>

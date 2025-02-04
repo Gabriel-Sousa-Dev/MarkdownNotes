@@ -14,7 +14,7 @@ export function Welcome(){
                     <ActionButton
                         Icon={HiDocumentAdd}
                         label='Novo Nota'
-                        to='/app/editor/5'
+                        to='/app/editor/1'
                     />
                     <ActionButton
                         Icon={HiDocumentSearch}

@@ -1,7 +1,7 @@
 import { app, BrowserWindow, Menu } from 'electron';
 import { ipcMain } from 'electron/main';
 import path from 'node:path';
-import { saveNote } from './IpcEvents/SaveNote.mjs';
+import { saveNote } from './IpcEvents/saveNote.js';
 import { readNote } from './IpcEvents/readNote.js';
 
 function createWindow(){
@@ -35,13 +35,13 @@ function createWindow(){
 app.whenReady().then( () => {
     ipcMain.on('save-note', (event, { noteId, content }) => {
 
-        console.log('disparou o evnto em main', noteId, content);
+        console.log('ipcMain:save-note | param: ', noteId, content);
         
         saveNote(noteId, content);
     })
 
     ipcMain.handle('read-note', async (event, noteId) => {
-        console.log('tentou ler: ' + noteId);
+        console.log('ipcMain:read-note | param: ' + noteId);
         const noteContent = await readNote(noteId)
         
         console.log('conteudo da nota ', noteContent);
